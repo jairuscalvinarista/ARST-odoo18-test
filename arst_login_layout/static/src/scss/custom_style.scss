@@ -1,0 +1,13 @@
+// Khusus Login (TIDAK punya o_web_client)
+body.o_home_menu_background:not(.o_web_client) {
+    background-image: url('/arst_login_layout/static/src/img/ARISTAnt.PNG') !important;
+    background-size: fill;
+    background-position: center;
+}
+
+// Khusus Home Menu / Apps Grid (PUNYA o_web_client)
+body.o_web_client.o_home_menu_background {
+    background-image: url('/arst_login_layout/static/src/img/ARISTA.PNG') !important;
+    background-size: contain;
+    background-position: center;
+}

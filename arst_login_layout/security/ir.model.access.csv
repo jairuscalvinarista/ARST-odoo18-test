@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_arst_login_layout_arst_login_layout,arst_login_layout.arst_login_layout,model_arst_login_layout_arst_login_layout,base.group_user,1,1,1,1

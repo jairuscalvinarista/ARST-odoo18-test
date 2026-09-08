@@ -1,0 +1,7 @@
+<odoo>
+    <template id="custom_login_layout" inherit_id="web.login_layout">
+        <xpath expr="//div[hasclass('container') and hasclass('py-5')]" position="attributes">
+            <attribute name="class" add="custom_login_bg" separator=" "/>
+        </xpath>
+    </template>
+</odoo>
