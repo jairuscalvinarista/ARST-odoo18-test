@@ -1,7 +1,6 @@
 from odoo import api, models
 
-
-class BaseImportImport(models.Model):
+class BaseImportImport(models.TransientModel):
     _inherit = 'base_import.import'
 
     @api.model
@@ -11,16 +10,3 @@ class BaseImportImport(models.Model):
                 _journal_import_company_field=True
             )
         return super().get_fields_tree(model, depth=depth)
-
-    def execute_import(self, fields, columns, options, dryrun=False):
-        """
-        Override execute_import untuk memastikan saat import account.journal,
-        system mengizinkan akses ke multi-company yang terlibat di dalam data excel.
-        """
-        res = super().execute_import(fields, columns, options, dryrun=dryrun)
-        
-        if self.res_model == 'account.journal':
-            # Jika diperlukan tambahan penyesuaian context di sini
-            pass
-            
-        return res
